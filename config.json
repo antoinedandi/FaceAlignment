@@ -1,9 +1,9 @@
 {
-    "name": "First3DFaceAlignmentModel",
+    "name": "Second3DFaceAlignmentModel",
     "n_gpu": 1,
 
     "arch": {
-        "type": "First3DFaceAlignmentModel",
+        "type": "Second3DFaceAlignmentModel",
         "args": {}
     },
     "data_loader": {
