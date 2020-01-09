@@ -66,36 +66,6 @@ if __name__ == '__main__':
     key_pts = sample['keypoints']
     visualize_keypoints(image, key_pts)
 
-    """
-    image = np.squeeze(image.numpy())
-    key_pts = key_pts.cpu().numpy()
-    key_pts = key_pts * 50.0 + 100
-
-    predicted_key_points = key_pts + [5., 5., 0]
-
-    # Image
-    fig = plt.figure(figsize=(4, 8))
-    ax = fig.add_subplot(2, 1, 1)
-    ax.imshow(image, cmap='gray')
-    ax.scatter(key_pts[:, 0], key_pts[:, 1], s=20, marker='.', c='g')
-    ax.scatter(predicted_key_points[:, 0], predicted_key_points[:, 1], s=20, marker='.', c='m')
-    ax.axis('off')
-
-    # 3D
-    x = - key_pts[:, 0]
-    y = key_pts[:, 1]
-    z = key_pts[:, 2]
-    ax = fig.add_subplot(2, 1, 2, projection='3d')
-    ax.scatter(x, y, z, c='r', marker='o')
-
-    ax.view_init(elev=95., azim=90.)
-    ax.set_xticklabels([])
-    ax.set_yticklabels([])
-    ax.set_zticklabels([])
-
-    plt.show()
-    """
-
     # Test dataloader
     data_loader = FacialKeypointsDataLoader(csv_file='../data/training_keypoints.csv',
                                             root_dir='../data/training',
