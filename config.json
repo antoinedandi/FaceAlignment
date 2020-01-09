@@ -1,9 +1,9 @@
 {
-    "name": "FaceAlignment_3D_1",
+    "name": "First3DFaceAlignmentModel",
     "n_gpu": 1,
 
     "arch": {
-        "type": "FaceAlignmentModel3D",
+        "type": "First3DFaceAlignmentModel",
         "args": {}
     },
     "data_loader": {
