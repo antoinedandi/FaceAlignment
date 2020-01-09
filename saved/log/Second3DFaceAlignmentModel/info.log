@@ -1,0 +1,111 @@
+2020-01-09 16:13:48,658 - train - INFO - Second3DFaceAlignmentModel(
+  (face_alignment_2D): FaceAlignmentModel2D(
+    (conv1): Conv2d(1, 32, kernel_size=(4, 4), stride=(1, 1))
+    (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (dropout1): Dropout(p=0.3, inplace=False)
+    (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+    (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (dropout2): Dropout(p=0.3, inplace=False)
+    (conv3): Conv2d(64, 128, kernel_size=(2, 2), stride=(1, 1))
+    (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (pool3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (dropout3): Dropout(p=0.3, inplace=False)
+    (conv4): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+    (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (pool4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+    (dropout4): Dropout(p=0.3, inplace=False)
+    (fc1): Linear(in_features=43264, out_features=1000, bias=True)
+    (bn5): BatchNorm1d(1000, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (dropout5): Dropout(p=0.3, inplace=False)
+    (fc2): Linear(in_features=1000, out_features=1000, bias=True)
+    (bn6): BatchNorm1d(1000, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (dropout6): Dropout(p=0.3, inplace=False)
+    (fc3): Linear(in_features=1000, out_features=136, bias=True)
+  )
+  (model_2D_to_3D): Model2Dto3DLandmarks(
+    (fc1): Linear(in_features=136, out_features=136, bias=True)
+    (bn1): BatchNorm1d(136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (dropout1): Dropout(p=0.3, inplace=False)
+    (fc2): Linear(in_features=136, out_features=136, bias=True)
+    (bn2): BatchNorm1d(136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (dropout2): Dropout(p=0.3, inplace=False)
+    (fc3): Linear(in_features=136, out_features=136, bias=True)
+    (bn3): BatchNorm1d(136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (dropout3): Dropout(p=0.3, inplace=False)
+    (fc4): Linear(in_features=136, out_features=136, bias=True)
+    (bn4): BatchNorm1d(136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (dropout4): Dropout(p=0.3, inplace=False)
+    (fc5): Linear(in_features=136, out_features=136, bias=True)
+    (bn5): BatchNorm1d(136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    (dropout5): Dropout(p=0.3, inplace=False)
+    (fc6): Linear(in_features=136, out_features=68, bias=True)
+  )
+)
+Trainable parameters: 44595892
+2020-01-09 16:34:32,686 - trainer - INFO -     epoch          : 1
+2020-01-09 16:34:32,687 - trainer - INFO -     loss           : 0.8651358020933051
+2020-01-09 16:34:32,687 - trainer - INFO -     val_loss       : 0.2959598875359485
+2020-01-09 16:35:12,481 - trainer - INFO -     epoch          : 2
+2020-01-09 16:35:12,481 - trainer - INFO -     loss           : 0.3639013958604712
+2020-01-09 16:35:12,482 - trainer - INFO -     val_loss       : 0.1863766840413997
+2020-01-09 16:35:52,381 - trainer - INFO -     epoch          : 3
+2020-01-09 16:35:52,382 - trainer - INFO -     loss           : 0.2968357606938011
+2020-01-09 16:35:52,382 - trainer - INFO -     val_loss       : 0.1483430380099698
+2020-01-09 16:36:32,546 - trainer - INFO -     epoch          : 4
+2020-01-09 16:36:32,547 - trainer - INFO -     loss           : 0.24728900617674776
+2020-01-09 16:36:32,547 - trainer - INFO -     val_loss       : 0.18137288689613343
+2020-01-09 16:37:12,171 - trainer - INFO -     epoch          : 5
+2020-01-09 16:37:12,171 - trainer - INFO -     loss           : 0.23098333195636148
+2020-01-09 16:37:12,172 - trainer - INFO -     val_loss       : 0.1474118698584406
+2020-01-09 16:37:14,871 - trainer - INFO - Saving checkpoint: saved/models/Second3DFaceAlignmentModel/0109_161347/checkpoint-epoch5.pth ...
+2020-01-09 16:37:17,267 - trainer - INFO - Saving current best: model_best.pth ...
+2020-01-09 16:37:59,097 - trainer - INFO -     epoch          : 6
+2020-01-09 16:37:59,097 - trainer - INFO -     loss           : 0.21794639559168566
+2020-01-09 16:37:59,098 - trainer - INFO -     val_loss       : 0.1478995581990794
+2020-01-09 16:38:38,780 - trainer - INFO -     epoch          : 7
+2020-01-09 16:38:38,780 - trainer - INFO -     loss           : 0.19884742616038573
+2020-01-09 16:38:38,780 - trainer - INFO -     val_loss       : 0.13134478001218092
+2020-01-09 16:39:18,154 - trainer - INFO -     epoch          : 8
+2020-01-09 16:39:18,155 - trainer - INFO -     loss           : 0.18575180596426913
+2020-01-09 16:39:18,155 - trainer - INFO -     val_loss       : 0.12789421348195326
+2020-01-09 16:39:57,653 - trainer - INFO -     epoch          : 9
+2020-01-09 16:39:57,653 - trainer - INFO -     loss           : 0.17062317007466365
+2020-01-09 16:39:57,654 - trainer - INFO -     val_loss       : 0.11615498771792963
+2020-01-09 16:40:37,136 - trainer - INFO -     epoch          : 10
+2020-01-09 16:40:37,137 - trainer - INFO -     loss           : 0.15498027001556597
+2020-01-09 16:40:37,137 - trainer - INFO -     val_loss       : 0.12735591750395925
+2020-01-09 16:40:39,962 - trainer - INFO - Saving checkpoint: saved/models/Second3DFaceAlignmentModel/0109_161347/checkpoint-epoch10.pth ...
+2020-01-09 16:41:20,664 - trainer - INFO -     epoch          : 11
+2020-01-09 16:41:20,664 - trainer - INFO -     loss           : 0.13149984792659158
+2020-01-09 16:41:20,665 - trainer - INFO -     val_loss       : 0.10477844064957217
+2020-01-09 16:42:00,604 - trainer - INFO -     epoch          : 12
+2020-01-09 16:42:00,604 - trainer - INFO -     loss           : 0.12961894705107338
+2020-01-09 16:42:00,604 - trainer - INFO -     val_loss       : 0.09392453894803399
+2020-01-09 16:42:39,798 - trainer - INFO -     epoch          : 13
+2020-01-09 16:42:39,799 - trainer - INFO -     loss           : 0.12889017125493601
+2020-01-09 16:42:39,799 - trainer - INFO -     val_loss       : 0.09246578875340913
+2020-01-09 16:43:19,196 - trainer - INFO -     epoch          : 14
+2020-01-09 16:43:19,196 - trainer - INFO -     loss           : 0.12579706475922936
+2020-01-09 16:43:19,196 - trainer - INFO -     val_loss       : 0.08689495858393217
+2020-01-09 16:43:58,307 - trainer - INFO -     epoch          : 15
+2020-01-09 16:43:58,307 - trainer - INFO -     loss           : 0.12358894779493934
+2020-01-09 16:43:58,307 - trainer - INFO -     val_loss       : 0.08960364606035383
+2020-01-09 16:44:00,689 - trainer - INFO - Saving checkpoint: saved/models/Second3DFaceAlignmentModel/0109_161347/checkpoint-epoch15.pth ...
+2020-01-09 16:44:41,460 - trainer - INFO -     epoch          : 16
+2020-01-09 16:44:41,461 - trainer - INFO -     loss           : 0.12538648937877855
+2020-01-09 16:44:41,461 - trainer - INFO -     val_loss       : 0.08828996270895004
+2020-01-09 16:45:21,141 - trainer - INFO -     epoch          : 17
+2020-01-09 16:45:21,141 - trainer - INFO -     loss           : 0.12619705200195314
+2020-01-09 16:45:21,142 - trainer - INFO -     val_loss       : 0.0925314227217122
+2020-01-09 16:46:00,755 - trainer - INFO -     epoch          : 18
+2020-01-09 16:46:00,756 - trainer - INFO -     loss           : 0.12004036683785288
+2020-01-09 16:46:00,756 - trainer - INFO -     val_loss       : 0.09038087133514254
+2020-01-09 16:46:39,895 - trainer - INFO -     epoch          : 19
+2020-01-09 16:46:39,896 - trainer - INFO -     loss           : 0.12090248912572861
+2020-01-09 16:46:39,896 - trainer - INFO -     val_loss       : 0.08901400899416521
+2020-01-09 16:47:18,851 - trainer - INFO -     epoch          : 20
+2020-01-09 16:47:18,852 - trainer - INFO -     loss           : 0.11417270961560701
+2020-01-09 16:47:18,852 - trainer - INFO -     val_loss       : 0.09379880561640389
+2020-01-09 16:47:18,852 - trainer - INFO - Validation performance didn't improve for 5 epochs. Training stops.

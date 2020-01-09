@@ -117,12 +117,12 @@ def visualize_keypoints(image, predicted_kp, true_kp=None):
     fig = plt.figure(figsize=(20, 4))
     ax = fig.add_subplot(1, 4, 1)
     ax.imshow(image, cmap='gray')
-    ax.scatter(predicted_kp[:, 0], predicted_kp[:, 1], s=20, marker='.', c='g')
+    ax.scatter(predicted_kp[:, 0], predicted_kp[:, 1], s=20, marker='.', c='m')
     ax.axis('off')
 
     if true_kp is not None:
         true_kp = true_kp * 50.0 + 100
-        ax.scatter(true_kp[:, 0], true_kp[:, 1], s=20, marker='.', c='m')
+        ax.scatter(true_kp[:, 0], true_kp[:, 1], s=20, marker='.', c='g')
 
     # Visualize 3D keypoints
     x = - predicted_kp[:, 0]
