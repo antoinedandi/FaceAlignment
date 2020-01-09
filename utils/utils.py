@@ -114,8 +114,8 @@ def visualize_keypoints(image, predicted_kp, true_kp=None):
     predicted_kp = predicted_kp * 50.0 + 100
 
     # Visualize Image
-    fig = plt.figure(figsize=(4, 8))
-    ax = fig.add_subplot(2, 1, 1)
+    fig = plt.figure(figsize=(20, 4))
+    ax = fig.add_subplot(1, 4, 1)
     ax.imshow(image, cmap='gray')
     ax.scatter(predicted_kp[:, 0], predicted_kp[:, 1], s=20, marker='.', c='g')
     ax.axis('off')
@@ -128,14 +128,32 @@ def visualize_keypoints(image, predicted_kp, true_kp=None):
     x = - predicted_kp[:, 0]
     y = predicted_kp[:, 1]
     z = predicted_kp[:, 2]
-    ax = fig.add_subplot(2, 1, 2, projection='3d')
-    ax.scatter(x, y, z, c='r', marker='o')
 
+    # First 3D view
+    ax = fig.add_subplot(1, 4, 2, projection='3d')
+    ax.scatter(x, y, z, c='r', marker='o')
     ax.view_init(elev=95., azim=90.)
     ax.set_xticklabels([])
     ax.set_yticklabels([])
     ax.set_zticklabels([])
 
+    # Second 3D view
+    ax = fig.add_subplot(1, 4, 3, projection='3d')
+    ax.scatter(x, y, z, c='r', marker='o')
+    ax.view_init(elev=120., azim=60.)
+    ax.set_xticklabels([])
+    ax.set_yticklabels([])
+    ax.set_zticklabels([])
+
+    # Third 3D view
+    ax = fig.add_subplot(1, 4, 4, projection='3d')
+    ax.scatter(x, y, z, c='r', marker='o')
+    ax.view_init(elev=60., azim=60.)
+    ax.set_xticklabels([])
+    ax.set_yticklabels([])
+    ax.set_zticklabels([])
+
+    plt.tight_layout()
     plt.show()
 
 

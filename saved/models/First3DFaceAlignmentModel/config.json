@@ -1,16 +1,15 @@
 {
     "name": "First3DFaceAlignmentModel",
     "n_gpu": 1,
-
     "arch": {
         "type": "First3DFaceAlignmentModel",
         "args": {}
     },
     "data_loader": {
         "type": "FacialKeypointsDataLoader",
-        "args":{
-            "csv_file": "data/training_keypoints.csv",
-            "root_dir": "data/training",
+        "args": {
+            "csv_file": "../data/training_keypoints.csv",
+            "root_dir": "../data/training",
             "batch_size": 32,
             "shuffle": true,
             "validation_split": 0.1,
@@ -19,16 +18,14 @@
     },
     "optimizer": {
         "type": "Adam",
-        "args":{
+        "args": {
             "lr": 0.001,
             "weight_decay": 0,
             "amsgrad": true
         }
     },
     "loss": "mse_loss",
-    "metrics": [
-
-    ],
+    "metrics": [],
     "lr_scheduler": {
         "type": "StepLR",
         "args": {
@@ -37,15 +34,12 @@
         }
     },
     "trainer": {
-        "epochs": 30,
-
+        "epochs": 20,
         "save_dir": "saved/",
-        "save_period": 5,
+        "save_period": 4,
         "verbosity": 2,
-        
         "monitor": "min val_loss",
-        "early_stop": 5,
-
+        "early_stop": 4,
         "tensorboard": true
     }
 }

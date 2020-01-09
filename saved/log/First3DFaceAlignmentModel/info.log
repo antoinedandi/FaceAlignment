@@ -1,0 +1,94 @@
+2020-01-09 14:46:34,133 - train - INFO - First3DFaceAlignmentModel(
+  (conv1): Conv2d(1, 32, kernel_size=(4, 4), stride=(1, 1))
+  (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (dropout1): Dropout(p=0.3, inplace=False)
+  (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (dropout2): Dropout(p=0.3, inplace=False)
+  (conv3): Conv2d(64, 128, kernel_size=(2, 2), stride=(1, 1))
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (dropout3): Dropout(p=0.3, inplace=False)
+  (conv4): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (dropout4): Dropout(p=0.3, inplace=False)
+  (fc1): Linear(in_features=43264, out_features=1000, bias=True)
+  (bn5): BatchNorm1d(1000, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout5): Dropout(p=0.3, inplace=False)
+  (fc2): Linear(in_features=1000, out_features=1000, bias=True)
+  (bn6): BatchNorm1d(1000, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout6): Dropout(p=0.3, inplace=False)
+  (fc3): Linear(in_features=1000, out_features=204, bias=True)
+)
+Trainable parameters: 44560124
+2020-01-09 15:05:49,563 - trainer - INFO -     epoch          : 1
+2020-01-09 15:05:49,564 - trainer - INFO -     loss           : 0.5683210341553939
+2020-01-09 15:05:49,564 - trainer - INFO -     val_loss       : 0.15948500876363955
+2020-01-09 15:06:29,154 - trainer - INFO -     epoch          : 2
+2020-01-09 15:06:29,155 - trainer - INFO -     loss           : 0.2812063317549856
+2020-01-09 15:06:29,155 - trainer - INFO -     val_loss       : 0.16306362363852953
+2020-01-09 15:07:07,866 - trainer - INFO -     epoch          : 3
+2020-01-09 15:07:07,867 - trainer - INFO -     loss           : 0.25136447454753674
+2020-01-09 15:07:07,867 - trainer - INFO -     val_loss       : 0.1346686275381791
+2020-01-09 15:07:46,751 - trainer - INFO -     epoch          : 4
+2020-01-09 15:07:46,752 - trainer - INFO -     loss           : 0.2301873432962518
+2020-01-09 15:07:46,752 - trainer - INFO -     val_loss       : 0.14083727582504874
+2020-01-09 15:07:49,087 - trainer - INFO - Saving checkpoint: saved/models/First3DFaceAlignmentModel/0109_144633/checkpoint-epoch4.pth ...
+2020-01-09 15:08:28,767 - trainer - INFO -     epoch          : 5
+2020-01-09 15:08:28,767 - trainer - INFO -     loss           : 0.22431296690514213
+2020-01-09 15:08:28,767 - trainer - INFO -     val_loss       : 0.14198564228258634
+2020-01-09 15:09:07,547 - trainer - INFO -     epoch          : 6
+2020-01-09 15:09:07,547 - trainer - INFO -     loss           : 0.18298587524577192
+2020-01-09 15:09:07,547 - trainer - INFO -     val_loss       : 0.12196920365095139
+2020-01-09 15:09:46,858 - trainer - INFO -     epoch          : 7
+2020-01-09 15:09:46,858 - trainer - INFO -     loss           : 0.17220860868692398
+2020-01-09 15:09:46,858 - trainer - INFO -     val_loss       : 0.11366221085190772
+2020-01-09 15:10:25,354 - trainer - INFO -     epoch          : 8
+2020-01-09 15:10:25,355 - trainer - INFO -     loss           : 0.15762109960380352
+2020-01-09 15:10:25,355 - trainer - INFO -     val_loss       : 0.11016348965073887
+2020-01-09 15:10:27,562 - trainer - INFO - Saving checkpoint: saved/models/First3DFaceAlignmentModel/0109_144633/checkpoint-epoch8.pth ...
+2020-01-09 15:10:30,657 - trainer - INFO - Saving current best: model_best.pth ...
+2020-01-09 15:11:11,242 - trainer - INFO -     epoch          : 9
+2020-01-09 15:11:11,242 - trainer - INFO -     loss           : 0.15234881694379607
+2020-01-09 15:11:11,243 - trainer - INFO -     val_loss       : 0.1209092464101942
+2020-01-09 15:11:49,554 - trainer - INFO -     epoch          : 10
+2020-01-09 15:11:49,555 - trainer - INFO -     loss           : 0.14501002736781773
+2020-01-09 15:11:49,555 - trainer - INFO -     val_loss       : 0.12056721213616822
+2020-01-09 15:12:27,901 - trainer - INFO -     epoch          : 11
+2020-01-09 15:12:27,901 - trainer - INFO -     loss           : 0.11585077094404321
+2020-01-09 15:12:27,901 - trainer - INFO -     val_loss       : 0.1038768573026908
+2020-01-09 15:13:06,340 - trainer - INFO -     epoch          : 12
+2020-01-09 15:13:06,341 - trainer - INFO -     loss           : 0.11387486206857782
+2020-01-09 15:13:06,341 - trainer - INFO -     val_loss       : 0.10347201255591292
+2020-01-09 15:13:08,783 - trainer - INFO - Saving checkpoint: saved/models/First3DFaceAlignmentModel/0109_144633/checkpoint-epoch12.pth ...
+2020-01-09 15:13:11,663 - trainer - INFO - Saving current best: model_best.pth ...
+2020-01-09 15:13:52,664 - trainer - INFO -     epoch          : 13
+2020-01-09 15:13:52,665 - trainer - INFO -     loss           : 0.11319280392245243
+2020-01-09 15:13:52,665 - trainer - INFO -     val_loss       : 0.09508102744033461
+2020-01-09 15:14:32,078 - trainer - INFO -     epoch          : 14
+2020-01-09 15:14:32,078 - trainer - INFO -     loss           : 0.10391811822590075
+2020-01-09 15:14:32,079 - trainer - INFO -     val_loss       : 0.09557535667952738
+2020-01-09 15:15:10,545 - trainer - INFO -     epoch          : 15
+2020-01-09 15:15:10,546 - trainer - INFO -     loss           : 0.10223898275902396
+2020-01-09 15:15:10,546 - trainer - INFO -     val_loss       : 0.09715289395106466
+2020-01-09 15:15:49,380 - trainer - INFO -     epoch          : 16
+2020-01-09 15:15:49,381 - trainer - INFO -     loss           : 0.10069153163778155
+2020-01-09 15:15:49,381 - trainer - INFO -     val_loss       : 0.08882059086310236
+2020-01-09 15:15:51,731 - trainer - INFO - Saving checkpoint: saved/models/First3DFaceAlignmentModel/0109_144633/checkpoint-epoch16.pth ...
+2020-01-09 15:15:54,386 - trainer - INFO - Saving current best: model_best.pth ...
+2020-01-09 15:16:35,056 - trainer - INFO -     epoch          : 17
+2020-01-09 15:16:35,056 - trainer - INFO -     loss           : 0.10932716554717013
+2020-01-09 15:16:35,057 - trainer - INFO -     val_loss       : 0.09277076760404988
+2020-01-09 15:17:13,575 - trainer - INFO -     epoch          : 18
+2020-01-09 15:17:13,576 - trainer - INFO -     loss           : 0.10601259485671395
+2020-01-09 15:17:13,576 - trainer - INFO -     val_loss       : 0.09518609360644692
+2020-01-09 15:17:51,753 - trainer - INFO -     epoch          : 19
+2020-01-09 15:17:51,754 - trainer - INFO -     loss           : 0.10512508565658017
+2020-01-09 15:17:51,754 - trainer - INFO -     val_loss       : 0.09107221090479901
+2020-01-09 15:18:30,526 - trainer - INFO -     epoch          : 20
+2020-01-09 15:18:30,527 - trainer - INFO -     loss           : 0.10834590580902602
+2020-01-09 15:18:30,527 - trainer - INFO -     val_loss       : 0.09050014834654958
+2020-01-09 15:18:33,028 - trainer - INFO - Saving checkpoint: saved/models/First3DFaceAlignmentModel/0109_144633/checkpoint-epoch20.pth ...
