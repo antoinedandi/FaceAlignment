@@ -26,13 +26,15 @@ class Rescale(object):
         if isinstance(self.output_size, int):
             if h > w:
                 new_h, new_w = self.output_size * h / w, self.output_size
+                ratio = new_w / w
             else:
                 new_h, new_w = self.output_size, self.output_size * w / h
+                ratio = new_h / h
         else:
             new_h, new_w = self.output_size
         new_h, new_w = int(new_h), int(new_w)
         img = cv2.resize(image, (new_w, new_h))
-        key_pts = key_pts * [new_w / w, new_h / h]
+        key_pts = key_pts * [new_w / w, new_h / h, ratio]
         return {'image': img, 'keypoints': key_pts}
 
 
@@ -51,9 +53,8 @@ class RandomCrop(object):
         new_h, new_w = self.output_size
         top = np.random.randint(0, h - new_h)
         left = np.random.randint(0, w - new_w)
-        image = image[top: top + new_h,
-                left: left + new_w]
-        key_pts = key_pts - [left, top]
+        image = image[top: top + new_h, left: left + new_w]
+        key_pts = key_pts - [left, top, 0]
         return {'image': image, 'keypoints': key_pts}
 
 
@@ -64,5 +65,4 @@ class ToTensor(object):
             image = image.reshape(image.shape[0], image.shape[1], 1)
         image = image.transpose((2, 0, 1))
 
-        return {'image': torch.from_numpy(image),
-                'keypoints': torch.from_numpy(key_pts)}
+        return {'image': torch.from_numpy(image), 'keypoints': torch.from_numpy(key_pts)}

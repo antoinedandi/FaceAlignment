@@ -1,0 +1,28 @@
+2019-12-31 11:06:01,484 - test - INFO - FaceAlignmentModel2D(
+  (conv1): Conv2d(1, 32, kernel_size=(4, 4), stride=(1, 1))
+  (bn1): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool1): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (dropout1): Dropout(p=0.1, inplace=False)
+  (conv2): Conv2d(32, 64, kernel_size=(3, 3), stride=(1, 1))
+  (bn2): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool2): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (dropout2): Dropout(p=0.2, inplace=False)
+  (conv3): Conv2d(64, 128, kernel_size=(2, 2), stride=(1, 1))
+  (bn3): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool3): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (dropout3): Dropout(p=0.3, inplace=False)
+  (conv4): Conv2d(128, 256, kernel_size=(1, 1), stride=(1, 1))
+  (bn4): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (pool4): MaxPool2d(kernel_size=2, stride=2, padding=0, dilation=1, ceil_mode=False)
+  (dropout4): Dropout(p=0.4, inplace=False)
+  (fc1): Linear(in_features=43264, out_features=1000, bias=True)
+  (bn5): BatchNorm1d(1000, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout5): Dropout(p=0.5, inplace=False)
+  (fc2): Linear(in_features=1000, out_features=1000, bias=True)
+  (bn6): BatchNorm1d(1000, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (dropout6): Dropout(p=0.6, inplace=False)
+  (fc3): Linear(in_features=1000, out_features=136, bias=True)
+)
+Trainable parameters: 44492056
+2019-12-31 11:06:01,485 - test - INFO - Loading checkpoint: saved/models/FaceAlignment_2D/best_model/model_best.pth ...
+2019-12-31 11:06:50,618 - test - INFO - {'loss': 0.08721089866254236}

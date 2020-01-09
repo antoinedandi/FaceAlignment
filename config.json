@@ -1,15 +1,15 @@
 {
-    "name": "FaceAlignment_2D",
+    "name": "FaceAlignment_3D_1",
     "n_gpu": 1,
 
     "arch": {
-        "type": "FaceAlignmentModel2D",
+        "type": "FaceAlignmentModel3D",
         "args": {}
     },
     "data_loader": {
         "type": "FacialKeypointsDataLoader",
         "args":{
-            "csv_file": "data/training_frames_keypoints.csv",
+            "csv_file": "data/training_keypoints.csv",
             "root_dir": "data/training",
             "batch_size": 32,
             "shuffle": true,
@@ -46,6 +46,6 @@
         "monitor": "min val_loss",
         "early_stop": 4,
 
-        "tensorboard": false
+        "tensorboard": true
     }
 }
