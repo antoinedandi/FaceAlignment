@@ -173,3 +173,4 @@ def roi_transform(roi, output_size=224):
     roi_tensor = torch.from_numpy(roi.reshape(1,1,output_size,output_size))
     roi_tensor = roi_tensor.type(torch.FloatTensor)
     return roi, roi_tensor
+
